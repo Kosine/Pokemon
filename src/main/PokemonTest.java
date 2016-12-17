@@ -7,6 +7,9 @@ public class PokemonTest {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
+		int poke = input.nextInt();
+		
+		for(int i = 0; i < poke; i++){
 		System.out.println("Please enter your pokemon name, type, ultimate ability, hp, cp. All must be separated by space: ");
 		String name1 = input.next();
 		String type1 = input.next();
@@ -18,6 +21,7 @@ public class PokemonTest {
 		
 		System.out.println("Name: "+name.getName()+"\nType: "+name.getType()+"\nUltimate: "+name.getUltimate()+"\nHP: "+name.getHP()+"\nCP: "+name.getCP());
 
+		}
 	}
 
 }
