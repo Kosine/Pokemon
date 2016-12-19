@@ -1,26 +1,40 @@
-package main;
+/**
+ * Programmer name: Sanjay Lindsay
+ * Program Details: This is just a simple program created to store a pokemon info 
+ * 
+ * 
+ */
 
-import java.util.*;
+package main;
+import javax.swing.JOptionPane;
 
 public class PokemonTest {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+				
 		
-		int poke = input.nextInt();
+		String numofpokes = JOptionPane.showInputDialog("Please enter the number of pokemon."); //capture user input in the from of a string
+		int numofpoke = Integer.parseInt(numofpokes); //convert the above input into an integer
 		
-		for(int i = 0; i < poke; i++){
-		System.out.println("Please enter your pokemon name, type, ultimate ability, hp, cp. All must be separated by space: ");
-		String name1 = input.next();
-		String type1 = input.next();
-		String ultimate1 = input.next();
-		int hp1 = input.nextInt();
-		int cp1 = input.nextInt();
+		for(int i = 0; i < numofpoke; i++){
+			
+		String name1 = JOptionPane.showInputDialog("Please enter your pokemon name.");
 		
-		pokemon name = new pokemon(name1, type1, ultimate1, hp1, cp1);
+		String type1 = JOptionPane.showInputDialog("Please enter your pokemon type.");
 		
-		System.out.println("Name: "+name.getName()+"\nType: "+name.getType()+"\nUltimate: "+name.getUltimate()+"\nHP: "+name.getHP()+"\nCP: "+name.getCP());
+		String ultimate1 = JOptionPane.showInputDialog("Please enter your pokemon ultimate ability.");
+		
+		String hp01 = JOptionPane.showInputDialog("Please enter the pokemon hp."); //capture user input in the from of a string
+		int hp1 = Integer.parseInt(hp01); //convert the above input into an integer
+		
+		String cp01 = JOptionPane.showInputDialog("Please enter the pokemon cp"); //capture user input in the from of a string
+		int cp1 = Integer.parseInt(cp01); //convert the above input into an integer
+		
+		pokemon name = new pokemon(name1, type1, ultimate1, hp1, cp1); //create a new pokemon object
+		
+		String message = ("Name: "+name.getName()+"\nType: "+name.getType()+"\nUltimate: "+name.getUltimate()+"\nHP: "+name.getHP()+"\nCP: "+name.getCP());
 
+		JOptionPane.showMessageDialog(null, message);
 		}
 	}
 
