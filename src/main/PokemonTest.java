@@ -16,7 +16,7 @@ public class PokemonTest {
 		String numofpokes = JOptionPane.showInputDialog("Please enter the number of pokemon."); //capture user input in the from of a string
 		int numofpoke = Integer.parseInt(numofpokes); //convert the above input into an integer
 		
-		for(int i = 0; i < numofpoke; i++){
+		for(int i = 1; i < numofpoke; i++){
 			
 		String name1 = JOptionPane.showInputDialog("Please enter your pokemon name.");
 		
